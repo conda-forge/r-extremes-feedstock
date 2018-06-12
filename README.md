@@ -14,14 +14,16 @@ Summary: Functions for performing extreme value analysis.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-extremes-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-extremes-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-extremes-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-extremes-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-extremes-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-extremes-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-extremes-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-extremes-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-extremes-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-extremes-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-extremes-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-extremes-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-extremes/badges/version.svg)](https://anaconda.org/conda-forge/r-extremes)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-extremes/badges/downloads.svg)](https://anaconda.org/conda-forge/r-extremes)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--extremes-green.svg)](https://anaconda.org/conda-forge/r-extremes) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-extremes.svg)](https://anaconda.org/conda-forge/r-extremes) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-extremes.svg)](https://anaconda.org/conda-forge/r-extremes) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-extremes.svg)](https://anaconda.org/conda-forge/r-extremes) |
 
 Installing r-extremes
 =====================

@@ -1,4 +1,4 @@
-{% set version = '2.0-8' %}
+{% set version = "2.0-9" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/extRemes_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/extRemes/extRemes_{{ version }}.tar.gz
-  sha256: d53d50d0feb6295f72c4f646242e1506ca51911c026f881d443d65f1c68ad75e
+  sha256: 7543e0cb97f12d0dad5b60575b98e6b7e73dc6e87e622b8c39def734a562fb32
 
 build:
   number: 0
