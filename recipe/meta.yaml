@@ -8,17 +8,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: extRemes_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/extRemes_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/extRemes/extRemes_{{ version }}.tar.gz
+    - {{ cran_mirron }}/src/contrib/extRemes_{{ version }}.tar.gz
+    - {{ cran_mirron }}/src/contrib/Archive/extRemes/extRemes_{{ version }}.tar.gz
   sha256: 0206ef85d5f6db33f17995e3945de538f390edfb89b730b09e722418e4fe8d72
 
 build:
   merge_build_host: true  # [win]
-  number: 1
-  skip: true  # [win32]
-
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -33,7 +30,7 @@ requirements:
     - r-lmoments
     - r-car
     - r-distillery
-
+    - libblas
   run:
     - r-base
     - r-lmoments
@@ -47,7 +44,7 @@ test:
 
 about:
   home: http://www.assessment.ucar.edu/toolkit/
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Functions for performing extreme value analysis.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
