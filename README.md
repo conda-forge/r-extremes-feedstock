@@ -3,7 +3,7 @@ About r-extremes
 
 Home: http://www.assessment.ucar.edu/toolkit/
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
