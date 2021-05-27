@@ -1,4 +1,4 @@
-{% set version = "2.1" %}
+{% set version = "2.1-1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/extRemes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/extRemes/extRemes_{{ version }}.tar.gz
-  sha256: 2d760b8d9db81fa70ac20735c10ef612908cea39cc779cc71b171afaebc8c9ac
+  sha256: 5a1927bb21f178ec5a3e3f862d792e690e45c16c88190e64e83aa1fb9e3ffa02
 
 build:
   merge_build_host: true  # [win]
