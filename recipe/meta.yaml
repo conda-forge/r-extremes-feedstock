@@ -1,5 +1,4 @@
 {% set version = "2.2-1" %}
-
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -14,27 +13,27 @@ source:
 
 build:
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [unix]
-    - {{ stdlib("c") }}          # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ stdlib("m2w64_c") }}    # [win]
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-lmoments
-    - r-car
-    - r-distillery
-    - libblas
+    - r-distillery >=1.0_4
   run:
     - r-base
     - r-lmoments
-    - r-car
-    - r-distillery
+    - r-distillery >=1.0_4
 
 test:
   commands:
@@ -42,11 +41,19 @@ test:
     - "\"%R%\" -e \"library('extRemes')\""  # [win]
 
 about:
-  home: http://www.assessment.ucar.edu/toolkit/
+  home: https://CRAN.R-project.org/package=extRemes
   license: GPL-2.0-or-later
-  summary: Functions for performing extreme value analysis.
+  summary: 'General functions for performing extreme value analysis.  In particular, allows for
+    inclusion of covariates into the parameters of the extreme-value distributions,
+    as well as estimation through MLE, L-moments, generalized (penalized) MLE (GMLE),
+    as well as Bayes.  Inference methods include parametric normal approximation, profile-likelihood,
+    Bayes, and bootstrapping.  Some bivariate functionality and dependence checking
+    (e.g., auto-tail dependence function plot, extremal index estimation) is also included.  For
+    a tutorial, see Gilleland and Katz (2016) <doi: 10.18637/jss.v072.i08> and for bootstrapping,
+    please see Gilleland (2020) <doi: 10.1175/JTECH-D-20-0070.1>.'
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
